@@ -35,7 +35,7 @@
         pdftitle={Дыпломны праект},             % загаловак
         pdfauthor={Буцько Антось Уладзіміравіч},% аўтар
         colorlinks=true,                        % каляровыя спасылкі
-        linkcolor=red,                          % колер унутраных спасылак
+        linkcolor=black,                        % колер унутраных спасылак
         linktoc=all,                            % спасылка па загалоўку і нумару старонкі
     }
 
@@ -264,7 +264,9 @@
 
 %%% Пункт 3.1 — нумар табліцы складаецца з нумару раздзела і
 %%%           — парадкавага нумару табліцы, падзеленых кропкай
-\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+%%%\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
 
 %%% Пункт 3.4 — формула адасабляецца пустым радком зверху і знізу
 \AtBeginDocument{%
