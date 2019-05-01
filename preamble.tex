@@ -73,6 +73,12 @@
         skip=1.5\baselineskip,          % пусты радок паміж малюнкам і назвай
         belowskip=-0.6\baselineskip     % "магія" для роўных прамежкаў зверху і знізу малюнка
     }
+    \captionsetup[lstlisting]{
+        labelsep=endash,
+        justification=centering,
+        font=onehalfspacing,
+        skip=1.5\baselineskip,
+    }
 
 \usepackage{fancyhdr} % пакет для устаноўкі калонтытулаў
     %%% Стыль старонкі (раздзел)
@@ -323,6 +329,20 @@
         \end{itemize}%
     }
 
+\usepackage{listings}
+    \lstset%
+    {%
+        showstringspaces=false,%
+        tabsize=4,%
+        basicstyle=\scriptsize\ttfamily,%
+        captionpos=b,%
+        inputpath=code/,%
+        aboveskip=\baselineskip,%
+        belowskip=\baselineskip
+    }
+
+%%% Нумарацыя лістынгаў у межах секцыі
+\AtBeginDocument{\numberwithin{lstlisting}{section}}
 %%% Настройкі для тытульнага аркуша
 \input{title_setting}
 
